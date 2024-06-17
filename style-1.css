@@ -1,0 +1,142 @@
+
+body {
+  background: #042029;
+  font-family: 'Merriweather';
+  color: #EAE3CB;
+  margin: 0;
+  padding: 0;
+}
+
+#art {
+  width: 100%;
+  margin: 0 auto;
+
+
+}
+
+#art h2 {
+
+  font-family: 'Bree Serif';
+  font-size: 5em;
+  color: #A57706;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+#art p {
+  text-align: center;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+ul li>img {
+  max-width: 220px;
+  border: 1px solid #FCF4DC;
+  cursor: url(images/magnifying_glass.png), auto;
+
+}
+
+ul li {
+  position: relative;
+}
+
+ul li div.preview {
+  position: absolute;
+  top: -100px;
+  left: 110px;
+  z-index: 100;
+}
+
+ul li div.preview img {
+  max-width: 400px;
+  display: block;
+  border: 1px solid #FCF4DC;
+  -webkit-box-shadow: 5px 5px 12px black;
+  -moz-box-shadow: 5px 5px 12px black;
+  box-shadow: 5px 5px 12px black;
+}
+
+.enlarged {
+  position: fixed;
+  top:0; left:0;
+  background:rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+/* style the x button */
+.enlarged span {
+  position: absolute;
+  top: 0; right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.enlarged .content {
+  margin-top: 10%;
+  margin-left: 10%;
+  height: 50%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border: 2px solid white;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.enlarged .content img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.enlarged .content .quote-div {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 1.5em;
+  width: 50%;
+  height: 100%;
+
+  background-color: #A57706;
+  align-items: center;
+  align-content: center;
+}
+
+.enlarged .content .quote-div p {
+  margin-left: 30px;
+  color: black;
+
+}
+
+@media (max-width: 768px) {
+  ul li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
